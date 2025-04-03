@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Django</title>
+    <title>Home</title>
 </head>
 <body>
-    <h1>Welcome to My Django Project</h1>
-    <p>This is the homepage of my Django application.</p>
-
-    <h2>List of Items:</h2>
-    <ul>
-        {% for item in items %}
-            <li>{{ item.name }}</li>
-        {% empty %}
-            <li>No items available.</li>
-        {% endfor %}
-    </ul>
+    <h1>Welcome to the Homepage</h1>
+    
+    <nav>
+        <ul>
+            <li><a href="{% url 'qfirst' %}">Go to Question 1</a></li>
+            <li><a href="{% url 'qsecond' %}">Go to Question 2</a></li>
+            <li><a href="{% url 'qthird' %}">Go to Question 3</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
